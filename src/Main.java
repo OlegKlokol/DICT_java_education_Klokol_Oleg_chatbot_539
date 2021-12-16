@@ -21,5 +21,16 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         String name = scanner.nextLine();
         System.out.println("What a great name you have, " + name + " !");
+        System.out.println("Let me guess your age.\n" +
+                "Enter remainders of dividing your age by 3, 5 and 7.");
+        remainder3 = scanner.nextInt();
+        remainder5 = scanner.nextInt();
+        remainder7 = scanner.nextInt();
+        System.out.println(
+                "Remaining 3: " + remainder3 +
+                        "\nRemaining 5: " + remainder5 +
+                        "\nRemaining 7: " + remainder7);
+        Age = (remainder3 * 70 + remainder5 * 21 + remainder7 * 15) % 105;
+        System.out.println("Your age is " + Age + " years");
     }
 }
